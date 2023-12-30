@@ -1,0 +1,92 @@
+:root {
+  --clr-pr-dark-cyan: hsl(185, 75%, 39%);
+  --clr-pr-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --clr-pr-dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --clr-n-dark-gray: hsl(0, 0%, 59%);
+
+  --fs-p: 1.5056em;
+  --fs-h1: 1.3em;
+  --fs-h2: 1em;
+
+  --ff-sans: "Kumbh Sans", sans-serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+}
+p,
+span {
+  color: var(--clr-pr-dark-grayish-blue);
+}
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  font-family: var(--ff-sans);
+}
+
+.background {
+  max-width: 350px;
+  height: 800px;
+  background-color: var(--clr-pr-dark-cyan);
+  background-image: url(images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat no-repeat;
+  background-position: right 15vw bottom 85vh, left 15vw top 48vh;
+  text-align: center;
+  padding: 8em 1em;
+}
+.card {
+  border-radius: 0.5em;
+  background-color: white;
+  overflow: hidden;
+}
+.hero {
+  background-image: url(images/bg-pattern-card.svg);
+  background-size: 80%;
+  width: 100%;
+  height: 150px;
+  position: relative;
+}
+.avatar img {
+  border-radius: 50%;
+  border: 4px white solid;
+  position: absolute;
+  top: 40%;
+  left: 17%;
+}
+.details {
+  margin-block: 4em 0;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--clr-n-dark-gray);
+}
+.details p {
+  margin-bottom: 2em;
+}
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-700);
+}
+h1 span {
+  font-weight: var(--fw-400);
+}
+h2 {
+  font-weight: var(--fw-700);
+}
+.stats-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
