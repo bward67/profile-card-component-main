@@ -25,48 +25,68 @@ span {
   padding: 0px;
   box-sizing: border-box;
 }
-html {
+body {
   font-family: var(--ff-sans);
-}
-
-.background {
-  max-width: 375px;
-  height: 800px;
-  background-color: var(--clr-pr-dark-cyan);
-  background-image: url(images/bg-pattern-top.svg),
-    url(images/bg-pattern-bottom.svg);
-  background-repeat: no-repeat no-repeat;
-  background-position: right 40vw bottom 65vh, left 28vw top 70vh;
-  text-align: center;
+  font-size: var(--fs-p);
+  padding: 1.5rem;
+  min-height: calc(100vh - 0.1px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: var(--clr-pr-dark-cyan);
+  position: relative;
+  overflow: hidden; /*to hide the scroll bars*/
+}
+
+.bg-top {
+  position: absolute; /*in relation to the body*/
+  /*top: -85%;
+  left: -60%;*/
+  top: -50%;
+  left: -20%;
+  z-index: -1;
+}
+
+.bg-bottom {
+  position: absolute; /*in relation to the body*/
+  /*bottom: -80%;
+  right: -52%;*/
+  z-index: -1;
+  bottom: -50%;
+  right: -20%;
 }
 .card {
   border-radius: 0.5em;
   background-color: white;
   overflow: hidden;
-  max-width: 375px;
+
   margin-inline: 1em;
+  width: 100%;
+  max-width: 500px;
 }
 .hero {
-  background-image: url(images/bg-pattern-card.svg);
-  background-size: 80%;
   width: 100%;
   height: 150px;
   position: relative;
+}
+.hero img {
+  width: 100%;
 }
 .avatar img {
   border-radius: 50%;
   border: 4px white solid;
   position: absolute;
-  top: 54%;
-  left: 35%;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%); /*will make it centered*/
+  width: 20%;
 }
 .details {
-  margin-block: 4em 0;
+  margin-block: 5em 0;
   line-height: 1.5;
   border-bottom: 1px solid var(--clr-n-dark-gray);
+  text-align: center;
 }
 .details p {
   margin-bottom: 2em;
@@ -90,7 +110,9 @@ h2 {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 3em;
+  color: white;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(228, 94%, 14%);
 }
