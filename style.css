@@ -30,20 +30,24 @@ html {
 }
 
 .background {
-  max-width: 350px;
+  max-width: 375px;
   height: 800px;
   background-color: var(--clr-pr-dark-cyan);
   background-image: url(images/bg-pattern-top.svg),
     url(images/bg-pattern-bottom.svg);
   background-repeat: no-repeat no-repeat;
-  background-position: right 8vw bottom 75vh, left 8vw top 43vh;
+  background-position: right 40vw bottom 65vh, left 28vw top 70vh;
   text-align: center;
-  padding: 8em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .card {
   border-radius: 0.5em;
   background-color: white;
   overflow: hidden;
+  max-width: 375px;
+  margin-inline: 1em;
 }
 .hero {
   background-image: url(images/bg-pattern-card.svg);
@@ -56,8 +60,8 @@ html {
   border-radius: 50%;
   border: 4px white solid;
   position: absolute;
-  top: 31%;
-  left: 17%;
+  top: 54%;
+  left: 35%;
 }
 .details {
   margin-block: 4em 0;
